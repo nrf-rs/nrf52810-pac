@@ -1,0 +1,23 @@
+[package]
+version = "0.1.0"
+authors = ["Ferdia McKeogh <ferdia@mckeogh.tech>"]
+description = "Peripheral access API for nRF52810 microcontroller"
+documentation = "https://docs.rs/nrf52810-pac"
+keywords = ["no-std", "arm", "cortex-m", "nrf52", "nrf52810"]
+license = "MIT OR Apache-2.0"
+name = "nrf52810-pac"
+repository = "https://github.com/chocol4te/nrf52810-pac"
+edition = "2018"
+readme = "README.md"
+
+[dependencies]
+bare-metal = "0.2.4"
+vcell = "0.1.0"
+cortex-m = "0.5.8"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.6.7"
+
+[features]
+rt = ["cortex-m-rt/device"]
