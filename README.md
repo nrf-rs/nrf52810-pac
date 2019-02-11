@@ -4,7 +4,7 @@
 
 NOTE: we use `svd2rust` to generate the code, `form` to organize it, and `cargo fmt` to make it pretty
 
-# [Documentation](https://docs.rs/nrf52810)
+# [Documentation](https://docs.rs/nrf52810-pac)
 
 # License
 
