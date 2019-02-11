@@ -1,5 +1,5 @@
 [package]
-version = "0.1.0"
+version = "0.6.0"
 authors = ["Ferdia McKeogh <ferdia@mckeogh.tech>"]
 description = "Peripheral access API for nRF52810 microcontroller"
 documentation = "https://docs.rs/nrf52810-pac"
