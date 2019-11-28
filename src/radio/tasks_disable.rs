@@ -1,84 +1,65 @@
-#[doc = r" Value to write to the register"]
-pub struct W {
-    bits: u32,
-}
-impl super::TASKS_DISABLE {
-    #[doc = r" Writes to the register"]
-    #[inline]
-    pub fn write<F>(&self, f: F)
-    where
-        F: FnOnce(&mut W) -> &mut W,
-    {
-        let mut w = W::reset_value();
-        f(&mut w);
-        self.register.set(w.bits);
+#[doc = "Writer for register TASKS_DISABLE"]
+pub type W = crate::W<u32, super::TASKS_DISABLE>;
+#[doc = "Register TASKS_DISABLE `reset()`'s with value 0"]
+impl crate::ResetValue for super::TASKS_DISABLE {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
     }
 }
-#[doc = "Values that can be written to the field `TASKS_DISABLE`"]
-pub enum TASKS_DISABLEW {
-    #[doc = "Trigger task"]
+#[doc = "Disable RADIO\n\nValue on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub enum TASKS_DISABLE_AW {
+    #[doc = "1: Trigger task"]
     TRIGGER,
 }
-impl TASKS_DISABLEW {
-    #[allow(missing_docs)]
-    #[doc(hidden)]
-    #[inline]
-    pub fn _bits(&self) -> bool {
-        match *self {
-            TASKS_DISABLEW::TRIGGER => true,
+impl From<TASKS_DISABLE_AW> for bool {
+    #[inline(always)]
+    fn from(variant: TASKS_DISABLE_AW) -> Self {
+        match variant {
+            TASKS_DISABLE_AW::TRIGGER => true,
         }
     }
 }
-#[doc = r" Proxy"]
-pub struct _TASKS_DISABLEW<'a> {
+#[doc = "Write proxy for field `TASKS_DISABLE`"]
+pub struct TASKS_DISABLE_W<'a> {
     w: &'a mut W,
 }
-impl<'a> _TASKS_DISABLEW<'a> {
-    #[doc = r" Writes `variant` to the field"]
-    #[inline]
-    pub fn variant(self, variant: TASKS_DISABLEW) -> &'a mut W {
+impl<'a> TASKS_DISABLE_W<'a> {
+    #[doc = r"Writes `variant` to the field"]
+    #[inline(always)]
+    pub fn variant(self, variant: TASKS_DISABLE_AW) -> &'a mut W {
         {
-            self.bit(variant._bits())
+            self.bit(variant.into())
         }
     }
     #[doc = "Trigger task"]
-    #[inline]
+    #[inline(always)]
     pub fn trigger(self) -> &'a mut W {
-        self.variant(TASKS_DISABLEW::TRIGGER)
+        self.variant(TASKS_DISABLE_AW::TRIGGER)
     }
-    #[doc = r" Sets the field bit"]
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
     pub fn set_bit(self) -> &'a mut W {
         self.bit(true)
     }
-    #[doc = r" Clears the field bit"]
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
     pub fn clear_bit(self) -> &'a mut W {
         self.bit(false)
     }
-    #[doc = r" Writes raw bits to the field"]
-    #[inline]
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        const MASK: bool = true;
-        const OFFSET: u8 = 0;
-        self.w.bits &= !((MASK as u32) << OFFSET);
-        self.w.bits |= ((value & MASK) as u32) << OFFSET;
+        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
         self.w
     }
 }
 impl W {
-    #[doc = r" Reset value of the register"]
-    #[inline]
-    pub fn reset_value() -> W {
-        W { bits: 0 }
-    }
-    #[doc = r" Writes raw bits to the register"]
-    #[inline]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
     #[doc = "Bit 0 - Disable RADIO"]
-    #[inline]
-    pub fn tasks_disable(&mut self) -> _TASKS_DISABLEW {
-        _TASKS_DISABLEW { w: self }
+    #[inline(always)]
+    pub fn tasks_disable(&mut self) -> TASKS_DISABLE_W {
+        TASKS_DISABLE_W { w: self }
     }
 }
