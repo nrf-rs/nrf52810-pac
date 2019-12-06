@@ -23503,7 +23503,7 @@ POSSIBILITY OF SUCH DAMAGE.\n
           </fields>
         </register>
         <register>
-          <dim>6</dim>
+          <dim>4</dim>
           <dimIncrement>0x4</dimIncrement>
           <name>TASKS_CAPTURE[%s]</name>
           <description>Description collection: Capture Timer value to CC[n] register</description>
@@ -23526,7 +23526,7 @@ POSSIBILITY OF SUCH DAMAGE.\n
           </fields>
         </register>
         <register>
-          <dim>6</dim>
+          <dim>4</dim>
           <dimIncrement>0x4</dimIncrement>
           <name>EVENTS_COMPARE[%s]</name>
           <description>Description collection: Compare event on CC[n] match</description>
@@ -23632,42 +23632,6 @@ POSSIBILITY OF SUCH DAMAGE.\n
               </enumeratedValues>
             </field>
             <field>
-              <name>COMPARE4_CLEAR</name>
-              <description>Shortcut between event COMPARE[4] and task CLEAR</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>Disabled</name>
-                  <description>Disable shortcut</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>Enabled</name>
-                  <description>Enable shortcut</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>COMPARE5_CLEAR</name>
-              <description>Shortcut between event COMPARE[5] and task CLEAR</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>Disabled</name>
-                  <description>Disable shortcut</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>Enabled</name>
-                  <description>Enable shortcut</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
               <name>COMPARE0_STOP</name>
               <description>Shortcut between event COMPARE[0] and task STOP</description>
               <lsb>8</lsb>
@@ -23726,42 +23690,6 @@ POSSIBILITY OF SUCH DAMAGE.\n
               <description>Shortcut between event COMPARE[3] and task STOP</description>
               <lsb>11</lsb>
               <msb>11</msb>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>Disabled</name>
-                  <description>Disable shortcut</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>Enabled</name>
-                  <description>Enable shortcut</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>COMPARE4_STOP</name>
-              <description>Shortcut between event COMPARE[4] and task STOP</description>
-              <lsb>12</lsb>
-              <msb>12</msb>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>Disabled</name>
-                  <description>Disable shortcut</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>Enabled</name>
-                  <description>Enable shortcut</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>COMPARE5_STOP</name>
-              <description>Shortcut between event COMPARE[5] and task STOP</description>
-              <lsb>13</lsb>
-              <msb>13</msb>
               <enumeratedValues>
                 <enumeratedValue>
                   <name>Disabled</name>
@@ -24061,60 +23989,6 @@ POSSIBILITY OF SUCH DAMAGE.\n
                 </enumeratedValue>
               </enumeratedValues>
             </field>
-            <field>
-              <name>COMPARE4</name>
-              <description>Write '1' to disable interrupt for event COMPARE[4]</description>
-              <lsb>20</lsb>
-              <msb>20</msb>
-              <enumeratedValues>
-                <usage>read</usage>
-                <enumeratedValue>
-                  <name>Disabled</name>
-                  <description>Read: Disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>Enabled</name>
-                  <description>Read: Enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-              <enumeratedValues>
-                <usage>write</usage>
-                <enumeratedValue>
-                  <name>Clear</name>
-                  <description>Disable</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>COMPARE5</name>
-              <description>Write '1' to disable interrupt for event COMPARE[5]</description>
-              <lsb>21</lsb>
-              <msb>21</msb>
-              <enumeratedValues>
-                <usage>read</usage>
-                <enumeratedValue>
-                  <name>Disabled</name>
-                  <description>Read: Disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>Enabled</name>
-                  <description>Read: Enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-              <enumeratedValues>
-                <usage>write</usage>
-                <enumeratedValue>
-                  <name>Clear</name>
-                  <description>Disable</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
           </fields>
         </register>
         <register>
@@ -24200,7 +24074,7 @@ POSSIBILITY OF SUCH DAMAGE.\n
           </fields>
         </register>
         <register>
-          <dim>6</dim>
+          <dim>4</dim>
           <dimIncrement>0x4</dimIncrement>
           <name>CC[%s]</name>
           <description>Description collection: Capture/Compare register n</description>
